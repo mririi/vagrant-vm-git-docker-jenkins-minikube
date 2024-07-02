@@ -1,0 +1,2 @@
+#Show Password
+docker exec docker-jenkins-1 cat /var/jenkins_home/secrets/initialAdminPassword
