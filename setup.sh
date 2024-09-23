@@ -60,8 +60,10 @@ sudo apt-get update
 sudo apt-get install -y jenkins  # Added -y to avoid prompt
 
 # Start Jenkins and enable it to run at startup
+sudo usermod -aG docker jenkins
 sudo systemctl start jenkins
 sudo systemctl enable jenkins
+sudo systemctl restart docker
 
 # Check if Jenkins started successfully
 if systemctl is-active --quiet jenkins; then
